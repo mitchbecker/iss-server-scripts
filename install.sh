@@ -14,10 +14,10 @@ wget -O /var/www/html/index.html https://raw.githubusercontent.com/mitchbecker/i
 # create scripts directory & download scripts
 rm -r /scripts
 mkdir /scripts
-wget -O /scripts/install.sh https://raw.githubusercontent.com/mitchbecker/iss-server-scripts/main/install.sh
-wget -O /scripts/update-webpage.sh https://raw.githubusercontent.com/mitchbecker/iss-server-scripts/main/update-webpage.sh
+wget -O /script/install.sh https://raw.githubusercontent.com/mitchbecker/iss-server-scripts/main/install.sh
+wget -O /script/update-iss-stats.sh https://raw.githubusercontent.com/mitchbecker/iss-server-scripts/main/update-iss-stats.sh
 
 # create crontab
-echo "* * * * * sh /scripts/update-webpage.sh" >> /var/tmp/cronconfig
+echo "* * * * * sh /script/update-iss-stats.sh" >> /var/tmp/cronconfig
 crontab /var/tmp/cronconfig
 rm /var/tmp/cronconfig
