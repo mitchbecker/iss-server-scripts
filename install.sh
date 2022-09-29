@@ -13,7 +13,7 @@ mkdir /scripts
 rm /var/www/html/*
 
 # create script file & index page
-wget -O /scripts/update-iss-stats.sh https://raw.githubusercontent.com/gsantella/iss-server-scripts/main/update-iss-stats.sh
+wget -O /scripts/update-iss-stats.sh https://raw.githubusercontent.com/mitchbecker/iss-server-scripts/main/update-iss-stats.sh
 
 # create crontab
 echo "* * * * * sh /scripts/update-iss-stats.sh" >> /var/tmp/cronconfig
